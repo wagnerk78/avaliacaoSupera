@@ -1,14 +1,14 @@
 package br.com.supera.desafio2;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
-
-import static java.lang.Float.parseFloat;
 
 public class Desafio2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Qual o valor você deseja decompor ?");
-        Double number = (double) parseFloat(scan.next());
+        Double number = Double.valueOf(scan.next());
+        new DecimalFormat("#,##0.00").format(number);
         int cont100 = 0;
         int cont50 = 0;
         int cont20 = 0;
@@ -65,7 +65,7 @@ public class Desafio2 {
             number = number - 0.05;
             cont005++;
         }
-        while (number > 0.00) {
+        while (number >= 0.01) {
             number = number - 0.01;
             cont001++;
         }
