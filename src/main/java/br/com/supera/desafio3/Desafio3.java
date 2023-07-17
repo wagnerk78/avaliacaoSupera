@@ -25,7 +25,6 @@ public class Desafio3 {
                     cont++;
                 }
             }
-
         }
         System.out.println("\n");
         System.out.println(cont);
